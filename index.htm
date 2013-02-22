@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Powerball - Home</title>
+<script src="http://code.jquery.com/jquery-1.8.3.min.js" type="text/javascript"></script>
+<script src="MobilePopup.js" type="text/javascript"></script>
+
+<style type="text/css">
+#container{
+	text-align:center;
+}
+</style>
+</head>
+
+<body class="oneColFixCtr">
+
+<div id="container">
+<h1>Hello World</h1>
+<p>Lorem Ipsum.</p>
+</div>
+<script type="text/javascript">
+	// Powerball already uses google analytics
+	// This is not an issue however, as you can use a different variable for use with another account
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-29233419-X']);
+    _gaq.push(['_setDomainName', 'powerball.com']);
+    _gaq.push(['_trackPageview']);
+
+    (function () {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+</body>
+</html>
