@@ -1,5 +1,5 @@
 ﻿$(function(){
-    jQuery.browser.mobile=/android|webOS|iP(hone|ad|od)/i.test(navigator.userAgent||navigator.vendor||window.opera);
+    jQuery.browser.mobile=/android|webOS|iP(hone|od)/i.test(navigator.userAgent||navigator.vendor||window.opera);
     
     var shoutzPopupStatus = 0;
 
