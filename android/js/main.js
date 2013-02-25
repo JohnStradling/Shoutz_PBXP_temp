@@ -79,7 +79,7 @@ var SendMail = function(){
         };
         $.ajax({
             type: "POST",
-            url: "php4/mainHandler.php",
+            url: "php/mainHandler.php",
             data: params,
             success: function(response){
                 if(response){
@@ -143,13 +143,17 @@ var subscribe = function()
         };
         $.ajax({
             type: "POST",
-            url: "php4/mainHandler.php",
+            url: "php/mainHandler.php",
             data: params,
             success: function(response){
                 if(response){
-                    $('#subscribe').val('');
-                    $('#subscribeMesage').text(response);
-                    $('#subscribeMesage').removeClass('red-label').addClass('green-label');
+                    var responseObj = jQuery.parseJSON(response);
+                    if(responseObj.ResponseData)
+                    {
+                        $('#subscribe').val('');
+                        $('#subscribeMesage').text("Thanks, we will send you a reminder!");
+                        $('#subscribeMesage').removeClass('red-label').addClass('green-label');
+                    }
                 }
             }
         });

@@ -20,6 +20,7 @@ $conn_array = array (
 			"TrustServerCertificate" => 1) ;
 
 $conn = sqlsrv_connect($db_host , $conn_array);
+if(!@conn) die ("Could not connect");
 
 $sql = "insert into Stage.ExperienceEmails(Email) values(?)";
 $stmt = sqlsrv_prepare($conn,$sql,array(&$new_email));
