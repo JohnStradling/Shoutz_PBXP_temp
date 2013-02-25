@@ -19,6 +19,10 @@
  */
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 require 'jsonwrapper.php';
+include ('inc.php');
+if(isset($_POST['email'])){insert($_POST['email']);}
+echo "Message Sent";
+/*
 include_once (dirname(dirname(__FILE__)).'/CONFIG.php');
 
 //Initial response is NULL
@@ -62,4 +66,5 @@ if (isset($_POST["action"])) {
 if (isset($response) && !empty($response) && !is_null($response)) {
     echo '{"ResponseData":' . json_encode($response) . '}';
 }
+*/
 ?>

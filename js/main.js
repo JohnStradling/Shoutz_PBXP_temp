@@ -147,13 +147,9 @@ var subscribe = function()
             data: params,
             success: function(response){
                 if(response){
-                    var responseObj = jQuery.parseJSON(response);
-                    if(responseObj.ResponseData)
-                    {
-                        $('#subscribe').val('');
-                        $('#subscribeMesage').text("Thanks, we will send you a reminder!");
-                        $('#subscribeMesage').removeClass('red-label').addClass('green-label');
-                    }
+                    $('#subscribe').val('');
+                    $('#subscribeMesage').text("Thanks, we will send you a reminder!");
+                    $('#subscribeMesage').removeClass('red-label').addClass('green-label');
                 }
             }
         });
