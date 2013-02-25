@@ -53,6 +53,7 @@
             popupWin.fadeIn("slow");
             shoutzPopupStatus = 1;
         }
+      	_gaq.push(['shoutz._trackEvent', 'shoutzPopup', 'viewed','Popup',1]);
     }
 
     function disablePopup(popupWin, backgd) {
@@ -63,33 +64,93 @@
         }
     }
 
+	function setCookieExpireAtMidnight(name, value){
+	  var now = new Date();
+	  var expire = new Date();
+	  expire.setFullYear(now.getFullYear());
+	  expire.setMonth(now.getMonth());
+	  expire.setDate(now.getDate()+1);
+	  expire.setHours(0);
+	  expire.setMinutes(0);
+	  document.cookie = name+"="+value+"; expires=" + expire.toString() +";";
+	}
+	
+	function getCookieValue(key){
+		currentcookie = document.cookie;
+		if (currentcookie.length > 0)
+		{
+			firstidx = currentcookie.indexOf(key + "=");
+			if (firstidx != -1)
+			{
+				firstidx = firstidx + key.length + 1;
+				lastidx = currentcookie.indexOf(";",firstidx);
+				if (lastidx == -1)
+				{
+					lastidx = currentcookie.length;
+				}
+				return unescape(currentcookie.substring(firstidx, lastidx));
+			}
+		}
+		return "";
+	}
+	
+	
     if (jQuery.browser.mobile) {
-    	
-        var fqdn_prefix = "http://208.78.97.108/Powerball/Images/";
-        $('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzPopupImg" src="shoutz_popup_blank.png" style="border:none;position:absolute;bottom:0;left:0"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><img id="shoutzMsg" src="message.png" style="border:none;position:absolute;bottom:0px;left:0px"/><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click_here.png" style="border:none;position:absolute;bottom:36px;left:176px"/></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
+    	var timeoutID;
+    	// Check for shoutz cookie
+    	var cookied = getCookieValue("powerballMobileShoutzPrompt");
+    	if(!cookied){
+    		// If no cookie set, set the cookie to expire overnight
+    		setCookieExpireAtMidnight("powerballMobileShoutzPrompt","visited");
+    		// Create the popup
+        	var fqdn_prefix = "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/";
+			$('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzPopupImg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/shoutz_popup_blank.png" style="border:none;position:absolute;bottom:0;left:0"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><img id="shoutzMsg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/message.png" style="border:none;position:absolute;bottom:0px;left:0px"/><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click_here.png" style="border:none;position:absolute;bottom:36px;left:176px"/></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
+			// Display the popup
+        	loadPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
+	  	}
+    
         $('#closeShoutzPopup').click(function (ev) {
             ev.preventDefault();
             disablePopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
             return false;
         });
+
         $('#shoutzDnld').click(function (ev) {
             ev.preventDefault();
             if (/android/i.test(navigator.userAgent||navigator.vendor||window.opera)) {
-                window.location = "https://play.google.com/store/apps/details?id=com.shoutz.android&hl=en";
+				_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/iOS-Appstore-Btn']);
+				//_gaq.push(['shoutz._trackEvent','shoutzPopup', 'clicked', 'Android-Market-Btn']);
+            	window.location = "https://play.google.com/store/apps/details?id=com.shoutz.android&hl=en";
             } else {
+                _gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/iOS-Appstore-Btn']);
+                //_gaq.push(['shoutz._trackEvent', 'shoutzPopup','clicked','iOS-Appstore-Btn']);
                 window.location = "https://itunes.apple.com/us/app/shoutz/id464309202?mt=8";
             }
             return false;
         });
-        loadPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
-    }
-
-	$(window).bind('orientationchange', function() {
+    }	
+    
+    
+    function redirectPage(locale) {
+  		window.clearTimeout(timeoutID);
+    	//window.location = locale;
+	}
+	
+    $(window).bind('orientationchange', function() {
 		location.reload();
     	centerPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
     });	
   	$(window).resize(function() {
   		centerPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
 	});
-	
 });
+
+var _gaq = _gaq || [];
+_gaq.push(['shoutz._setAccount', 'UA-37611136-4']);
+_gaq.push(['shoutz._trackPageview']);
+
+(function() {
+	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+})();
