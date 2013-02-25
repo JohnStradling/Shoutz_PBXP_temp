@@ -1,0 +1,438 @@
+body{
+    font-family:  Arial,sans-serif,"Helvetica Neue";
+    font-size: 11px;
+    background: #FFFFFF;
+    color: #000000;   
+}
+strong
+{
+    font-weight: bold !important;
+}
+em
+{
+    font-style: italic !important;
+}
+.block
+{
+    display: block;
+}
+.clear
+{
+    clear: both;
+}
+.left 
+{
+    float: left;
+}
+.right
+{
+    float: right;
+}
+.center
+{
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+.absolute
+{
+    position: absolute;
+}
+.align-left
+{
+    text-align: left;
+}
+.align-right
+{
+    text-align: right;
+}
+.align-center
+{
+    text-align: center;
+}
+div.header
+{
+    background-image: url("../images/background.jpg");    
+    min-height: 550px;
+}
+div.central
+{
+    background-image: url("../images/wood_bg.jpg");
+    background-repeat: repeat-x;    
+}
+div.widgets
+{
+    background-color: #E6F0F2;
+}
+div.footer
+{
+    background-color: #FFFFFF;
+    padding-top: 65px;
+}
+span.info-label
+{
+    font-style: italic;
+    font-size: 14px;
+    margin-top: 10px;
+}
+.center-content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 980px;
+    position: relative;
+    display: block;
+    clear: both;
+}
+.green-label
+{
+    color: #557723;
+}
+.red-label
+{
+    color: #FB0000;
+}
+div.phone-hand
+{
+    width: 635px;   
+    background-image: url("../images/hand_phone4.png");
+    background-repeat: no-repeat;
+    height: 700px;
+    position: absolute;
+}
+ul#slider
+{    
+    top: 162px;
+    left: 85px;
+    width: 263px;
+    height: 423px;
+}
+div.header div.info
+{
+    background-color: #E5F0F2;
+    text-align: left;    
+    margin-left: 625px; 
+    padding-top: 50px;
+    padding-bottom: 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 345px;
+}
+div.header div.info h1
+{
+    font-family: 'Armata', sans-serif;
+    font-size: 36px;
+    margin-bottom: 5px; 
+    color: #64A9B9;    
+}
+div.header div.info p 
+{
+    font-family: 'Armata', sans-serif;
+    font-size: 19px;
+    color: #4C6165; 
+    padding-left: 20px;
+    line-height: 30px;
+}
+div.header div.info a.link-button
+{
+    position: relative;
+    display: block;
+    height: 113px;
+    overflow: hidden;
+    margin-top: 35px;
+}
+div.header div.info a.link-button img.button-image
+{
+    position: absolute;
+}
+div.header div.info a.link-button img.button-image:hover
+{
+    top: -113px;
+}
+div.central div.info
+{
+    margin-left: 385px;   
+}
+div.central div.info p
+{
+    font-size:  24px;
+    line-height: 55px;
+    color: #eaeaea;
+    font-family: 'Armata', sans-serif;
+    padding: 40px 0px 20px 100px;
+}
+div.central div.subscribe
+{    
+    background-image: url("../images/subscribe_form_bg.png");
+    background-repeat: no-repeat;   
+    margin-top: 35px;
+    width: 802px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 35px;
+}
+#subscribe
+{
+    background-image: url("../images/subscribe_form.png");
+    background-repeat: no-repeat;
+    border: none;
+    width: 436px;
+    padding: 27px 20px 34px 75px;
+    background-color: #E6F0F2;
+    color: #A9BCBF;
+    font-size: 18px;    
+}
+div.central div.subscribe-input-holder
+{
+    /* margin-right: 25px; */
+}
+div.central div.subscribe-input-holder span.info-label
+{
+    color: #4E919C;
+}
+div.central div.subscribe a.link-button
+{
+    position: relative;
+    display: block;
+    height: 81px;
+    overflow: hidden;
+    width: 245px;
+}
+div.central div.subscribe a.link-button img.button-image
+{
+    position: absolute;
+}
+div.central div.subscribe a.link-button img.button-image:hover
+{
+    top: -81px;
+}
+div.widgets div.center-content
+{
+    padding-top: 50px;
+}
+div.widgets div.center-content div.single-widget
+{
+    line-height: 30px;
+    font-size: 14px;    
+    color: #475557;
+}
+div.widgets div.center-content div.single-widget span.title
+{
+    font-size: 27px;       
+    font-family: 'Armata', sans-serif;
+}
+div.widgets div.center-content div.single-widget i
+{
+    color: #4E919C;
+}
+div.widgets div.center-content div.single-widget div.rounded
+{
+    background-color: #FFFFFF;
+    border-radius: 15px !important;
+    -webkit-border-radius: 15px !important;
+    -moz-border-radius: 15px !important;    
+    padding: 30px;
+    margin-top: 20px;    
+}
+div.widgets div.center-content div.single-widget.left
+{
+    width: 350px;
+}
+div.widgets div.center-content div.single-widget.right
+{
+    width: 580px;
+}
+div.widgets div.center-content div.single-widget.right span.title
+{
+    padding-left: 30px;
+}
+div.widgets div.center-content div.single-widget.right ul li.separator
+{
+    height: 30px;
+}
+div.widgets div.center-content div.single-widget.right ul li div.right
+{
+    width: 440px;
+}
+div.widgets div.center-content div.twitterHolder
+{
+    padding-left: 30px;
+    padding-top: 30px;
+}
+div.widgets div.center-content div.twitterHolder div.tweets 
+{
+    padding-left: 30px;
+}
+div.widgets div.center-content div.twitterHolder div.tweets p.content a
+{
+    font-size: 14px;    
+    text-decoration: none;
+    color: #4E919C;    
+    line-height: 30px;
+}
+div.widgets div.center-content div.twitterHolder div.tweets p.content a:hover
+{
+    text-decoration: underline;
+}
+div.widgets div.center-content div.twitterHolder div.tweets ul
+{
+    width: 467px;
+}
+div.widgets div.center-content div.twitterHolder div.tweets ul li
+{
+    height: 80px;
+}
+div.widgets div.center-content div.twitterHolder div.tweets ul li span.date
+{
+    text-align: right;
+    display: block;
+    font-size: 12px;
+    font-style: italic;
+    color: #475557;
+}
+div.widgets div.contact-us-button-holder
+{
+    background-image: url("../images/contact_button_bg.png");
+    background-repeat: no-repeat;
+    width: 328px;
+    bottom: -40px;
+    padding-top: 35px;
+}
+div.widgets div.contact-us-button-holder a.link-button
+{
+    width: 245px;   
+    display: block;
+    height: 81px;
+    overflow: hidden;
+    position: relative;
+}
+div.widgets div.contact-us-button-holder a.link-button img
+{
+    position: absolute;
+}
+div.widgets div.contact-us-button-holder a.link-button img:hover
+{
+    top: -81px;
+}
+div.footer div.center-content p.info
+{
+    font-size: 14px;
+    line-height: 30px;
+    color: #637072;
+}
+div.footer div.center-content img.separator
+{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+div.footer div.center-content ul.social
+{
+    width: 135px;
+}
+div.footer div.center-content ul.social li.first 
+{
+    margin-left: 0px;
+}
+div.footer div.center-content ul.social li 
+{
+    overflow: hidden;
+    height: 18px;
+    margin-left: 10px;
+}
+div.footer div.center-content ul.social li img:hover
+{
+    margin-top: -18px;
+}
+div#contact
+{
+    display: none;
+}
+.contact
+{
+    background-image: url("../images/contact_us_background.png");
+    width: 493px;
+    height: 561px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    padding: 60px;
+}
+div.contact a.closePopup{
+    right: 0px;
+    display: block;
+    width: 67px;
+    height: 67px;
+    margin-top: -225px;
+    position: absolute;
+}
+img.fill-the-forms
+{
+    margin-left: 180px !important;
+}
+ul.user-data
+{
+    padding-top: 25px;
+    width: 400px;
+    margin-left: 45px;
+}
+ul.user-data li
+{
+    margin-bottom: 20px;
+}
+ul.user-data input#name, ul.user-data input#email, ul.user-data input#subject, ul.user-data textarea#message
+{
+    border: none;    
+    padding: 13px 22px;
+    width: 360px;
+    color: #A9BCBF;
+    font-family: Arial,sans-serif,"Helvetica Neue";
+    background-image: url("../images/input_text.png");   
+    background-color: transparent;
+    background-repeat: no-repeat;
+    font-size: 18px; 
+}
+ul.user-data textarea#message
+{   
+    padding: 20px; 
+    min-width: 362px;
+    max-width: 362px;
+    height: 130px;
+    min-height: 130px;
+    max-height: 130px;
+    background-image: url("../images/textarea.png");   
+    background-color: transparent;
+    background-repeat: no-repeat;
+    overflow: auto;
+}
+ul.user-data a.link-button
+{
+    display: block;
+    height: 81px;
+    overflow: hidden;
+    position: relative;
+    width: 245px;
+}
+ul.user-data a.link-button img.button-image
+{
+    position: absolute;
+}
+ul.user-data a.link-button img.button-image:hover
+{
+    top: -81px;
+}
+ul.user-data span.info-label
+{
+    margin-top: 30px;
+}
+.doc-loader {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;	
+}
+.doc-loader td {   
+    background-color: #E5F0F2;
+    color: #ffffff;
+    text-align: center;
+    vertical-align: middle;
+}
