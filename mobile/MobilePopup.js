@@ -156,7 +156,7 @@ _gaq.push(['shoutz._trackPageview']);
 })();
 
 function getShoutzAd() {
-	var randomnumber=Math.floor(Math.random()*5);
+	var randomnumber=Math.floor(Math.random()*4) +1;
 	var adlocation= "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/placeholder_ad" + randomnumber + ".png";
 	document.getElementById("shoutzimg").innerHTML='<a href="http://powerballexp.shoutz.com/web/"><img src="' + adlocation + '" height="262" width="164" /></a>';
 }
