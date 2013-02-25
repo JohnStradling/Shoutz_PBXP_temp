@@ -154,3 +154,9 @@ _gaq.push(['shoutz._trackPageview']);
 	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 })();
+
+function getShoutzAd() {
+	var randomnumber=Math.floor(Math.random()*5);
+	var adlocation= "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/placeholder_ad" + randomnumber + ".png";
+	return adlocation;
+}
