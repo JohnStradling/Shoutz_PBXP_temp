@@ -79,7 +79,7 @@ var SendMail = function(){
         };
         $.ajax({
             type: "POST",
-            url: "php/mainHandler.php",
+            url: "php4/mainHandler.php",
             data: params,
             success: function(response){
                 if(response){
@@ -143,7 +143,7 @@ var subscribe = function()
         };
         $.ajax({
             type: "POST",
-            url: "php/mainHandler.php",
+            url: "php4/mainHandler.php",
             data: params,
             success: function(response){
                 if(response){
