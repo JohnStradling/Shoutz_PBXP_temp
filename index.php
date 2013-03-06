@@ -1,3 +1,14 @@
+<?php
+ 
+header("HTTP/1.1 301 Moved Permanently");
+ 
+header("Location: http://powerballexp.shoutz.com/web/index.html");
+ 
+exit();
+ 
+?>
+
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -25,52 +36,13 @@
         <script type="text/javascript" src="js/jquery.myHint.js"></script>
         <script type="text/javascript" src="js/jquery.vticker-min.js"></script>
         <script type="text/javascript" src="js/jquery.facebox.js"></script>                
+        <script type="text/javascript" src="web/js/MobilePopup.js"></script>                
 
         <!-- Main script -->
-        <script type="text/javascript" src="js/main.js"></script>   
-		<script type="text/javascript">
-			function subscribe()
-			{
-				var inputEmail = $('input#subscribe').val();
-				var isValid = true;
-				var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-				if(!emailReg.test(inputEmail) || inputEmail == ""){
-					isValid = false;        
-					$('#subscribeMesage').text("Your email is not in valid format!");
-					$('#subscribeMesage').removeClass('green-label').addClass('red-label');
-				}
-				if(isValid){
-					//document.forms['emailform'].submit();
-					var params = {
-						'action'    : 'Subscribe',
-						'email'     : inputEmail
-					};
-					$.ajax({
-						type: "GET",
-						//type: "POST",
-						url: "db.php?subscribe=" + inputEmail,
-						//url: "php/mainHandler.php",
-						//data: params,
-						success: function(response){
-							if(response){
-									$('#subscribe').val('');
-									$('#subscribeMesage').text(response);
-									//$('#subscribeMesage').text("Thanks, we will send you a reminder!");
-									$('#subscribeMesage').removeClass('red-label').addClass('green-label');
-							}
-							else {
-									$('#subscribe').val('');
-									$('#subscribeMesage').text("Something went wrong");
-									//$('#subscribeMesage').text("Thanks, we will send you a reminder!");
-									$('#subscribeMesage').removeClass('green-label').addClass('red-label');
-							}
-						}
-					});
-				}
-			};
-		</script>
+        <script type="text/javascript" src="js/main.js"></script>                       
     </head>
     <body>    
+		<div id="container"></div>
         <table class="doc-loader">
             <tr>
                 <td>
@@ -97,8 +69,9 @@
                     <h1>&nbsp;</h1>
                     <h1> <img src="images/pb.png" /></h1>
                     <p>
-						Win $100 TODAY by downloading the <strong>Shoutz™</strong> app! <br /><br />
-						We're giving away $100 a day for 60 days. Become $100 Richer and receive the Powerball Mobile Experience! Download today!
+                        Download <strong>Shoutz™</strong> app Today <br />
+                         enjoy the Mobile Powerball Experience on your mobile 
+                         <br /> Dial <strong> **SHOUTZ Now! </strong>
                     </p>
                     <p>&nbsp;</p>
                     <table width="200" border="0">
@@ -121,8 +94,7 @@
                     </p>
                 </div>
                 <div class="subscribe">
-                    <form name="emailform" id="emailform" action="index.php" method="get">
-					<div class="left subscribe-input-holder">
+                    <div class="left subscribe-input-holder">
                         <input type="text" id="subscribe" name="subscribe"/>  
                         <span class="info-label block align-center">
                             Want a reminder to download later? Enter your email address for a reminder.
@@ -157,7 +129,7 @@
         </div>
         <div id="contact">
             <div class="contact">
-				<img class="fill-the-forms" src="images/fill_the_forms.png" alt="Fill the forms bellow"/>
+                <img class="fill-the-forms" src="images/fill_the_forms.png" alt="Fill the forms bellow"/>
                 <a class="closePopup" href="javascript: ClosePopupWindow();"><img src="images/close.png" alt="Close"/></a>
                 <ul class="user-data">
                     <li>
@@ -176,7 +148,7 @@
                         <a href="javascript: SendMail();" class="link-button left">
                             <img src="images/send_msg_button.png" class="button-image" alt="Submit"/>
                         </a>
-                        <span id="messageStatus" class="info-label block green-label right">      
+                        <span id="messageStatus" class="info-label block green-label right">                            
                         </span>
                     </li>
                 </ul>
