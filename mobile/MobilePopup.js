@@ -118,7 +118,7 @@
         $('#shoutzDnld').click(function (ev) {
             ev.preventDefault();
             if (/android/i.test(navigator.userAgent||navigator.vendor||window.opera)) {
-				_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/iOS-Appstore-Btn']);
+				_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/Android-Markete-Btn']);
 				//_gaq.push(['shoutz._trackEvent','shoutzPopup', 'clicked', 'Android-Market-Btn']);
             	window.location = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp";
             } else {
