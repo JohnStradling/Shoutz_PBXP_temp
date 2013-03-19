@@ -20,8 +20,8 @@
             "height": popupHeight
         });
         popupWin.find('#shoutzPopupImg').css({
-            "width": Math.round(664 * ratio),
-            "height": Math.round(360 * ratio)
+            "width": Math.round(664 * ratio * ratio),
+            "height": Math.round(360 * ratio * ratio)
         });
         popupWin.find('#shoutzCloseImg').css({
             "width": Math.round(100 * ratio),
@@ -30,16 +30,14 @@
         });
         popupWin.find('#shoutzDnldImg').css({
             "width": Math.round(310 * ratio),
-            "height": Math.round(58 * ratio),
-            "left": Math.round(177 * ratio),
-            "bottom": Math.round(35 * ratio)
+            "height": Math.round(63 * ratio),
+            "left": Math.round(170 * ratio),
+            "bottom": Math.round(25 * ratio)
         });
         popupWin.find('#shoutzMsg').css({
             "position":"absolute",
-            "width": Math.round(740 * ratio * 0.7),
-            "height": Math.round(200 * ratio * 0.7),
-            "left": Math.round(177 * ratio * 0.4),
-            "bottom": Math.round(120 * ratio)
+            "width": Math.round(664 * ratio),
+            "height": Math.round(360 * ratio)
         });
     }
 
@@ -104,7 +102,7 @@
     		setCookieExpireAtMidnight("powerballMobileShoutzPrompt","visited");
     		// Create the popup
         	var fqdn_prefix = "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/";
-			$('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzPopupImg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/download_prompt_3-11.png" style="border:none;position:absolute;bottom:0;left:0"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click_here2.png" width="383" height="58" style="border:none;position:absolute;bottom:0px;left:176px" /></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
+			$('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzMsg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/download_prompt_3-19.png" style="border:none;position:absolute;bottom:0px;left:0px"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click_here.png" style="border:none;position:absolute;bottom:36px;left:176px"/></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
 			// Display the popup
         	loadPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
 	  	}
