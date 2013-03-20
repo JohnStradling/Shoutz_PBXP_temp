@@ -144,15 +144,15 @@
 });
 
 var _gaq = _gaq || [];
-_gaq.push(['shoutz._setAccount', 'UA-37611136-4']);
-_gaq.push(['shoutz._trackPageview']);
+  _gaq.push(['_setAccount', 'UA-39449118-1']);
+  _gaq.push(['_trackPageview']);
 
-(function() {
-	var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-	ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-	var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-})();
-
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+  
 function getShoutzAd() {
 	var randomnumber=Math.floor(Math.random()*4) +1;
 	var adlocation= "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/placeholder_ad" + randomnumber + ".png";
