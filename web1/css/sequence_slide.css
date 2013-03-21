@@ -1,0 +1,286 @@
+
+
+/* ==========================================================================
+   Slider Animations
+   ========================================================================== */
+
+
+/*SLIDE 1 ANIMATIONS */
+.slide.one{ left: 0%; width: 52%; max-width: 578px; max-height: 754px !important; bottom: -100%; }
+.slide.one.animate-in { bottom: -50%; }
+.slide.one.animate-out { }
+
+.title.one { left: 58%; width: 35%; bottom: 10%; }
+.title.one.animate-in { bottom: 6%; }
+.title.one.animate-out { }
+
+.subtitle.one { top: 99%; width: 35%; left: 58%; }
+.subtitle.one.animate-in { top: 96%; }
+.subtitle.one.animate-out { }
+
+
+
+
+/*SLIDE 2 ANIMATIONS */
+.slide.twoOne, .slide.twoThree, .slide.twoTwo{ left: 17%; top: 0%; width: 50%; max-width: 261px; max-height: 523px !important; }
+.slide.twoTwo{ left: 35%; max-width: 327px; max-height: 653px !important; }
+.slide.twoThree{ left: 60%; }
+
+.slide.twoOne.animate-in{ top: 79%; }
+.slide.twoTwo.animate-in{ top: 72%;
+	-webkit-transition-duration: 1.5s; -moz-transition-duration: 1.5s; -o-transition-duration: 1.5s; -ms-transition-duration: 1.5s; transition-duration: 1.5s;
+}
+.slide.twoThree.animate-in{ top: 79%;
+	-webkit-transition-duration: 2s; -moz-transition-duration: 2s; -o-transition-duration: 2s; -ms-transition-duration: 2s; transition-duration: 2s;
+}
+.slide.twoOne.animate-out{ }
+.slide.twoTwo.animate-out{ -webkit-transition-duration: 1.5s; -moz-transition-duration: 1.5s; -o-transition-duration: 1.5s; -ms-transition-duration: 1.5s; transition-duration: 1.5s; }
+.slide.twoThree.animate-out{ -webkit-transition-duration: 2s; -moz-transition-duration: 2s; -o-transition-duration: 2s; -ms-transition-duration: 2s; transition-duration: 2s; }
+
+
+
+
+/*SLIDE 3 ANIMATIONS */
+.slide.three{ left: 50%; margin-left: -501px; width: 1003px; max-width: 1003px; max-height: 521px !important; top: 180%;}
+.slide.three.animate-in{ top: 100%; }
+.slide.three.animate-out{ top: 180%; }
+
+.title.three { left: 0%; width: 100%; text-align: center; bottom: 100%; }
+.title.three.animate-in { bottom: 22%; }
+.title.three.animate-out { }
+
+.subtitle.three { top: 78%; width: 100%; left: 0%; text-align: center; display: block;  }
+.subtitle.three.animate-in {}
+.subtitle.three.animate-out {  }
+
+
+
+
+/*SLIDE 4 ANIMATIONS */
+.slide.four{ left: 38%; bottom: -110%; width: 60%; max-width: 622px; max-height: 780px !important;
+	-moz-transform: scale(1) rotate(-50deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-webkit-transform: scale(1) rotate(-50deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-o-transform: scale(1) rotate(-50deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-ms-transform: scale(1) rotate(-50deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	transform: scale(1) rotate(-50deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+.slide.four.animate-in{ left: 42%; opacity: 1; bottom: -50%;
+	-moz-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-webkit-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-o-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	-ms-transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+	transform: scale(1) rotate(0deg) translateX(0px) translateY(0px) skewX(0deg) skewY(0deg);
+}
+.slide.four.animate-out{ left: 40%; }
+
+.title.four { left: 5%; width: 30%; bottom: 7%; }
+.title.four.animate-in { bottom: 4%; }
+.title.four.animate-out { }
+
+.subtitle.four { left: 5%; top: 101%; width: 30%; } 
+.subtitle.four.animate-in { top: 98%; }
+.subtitle.four.animate-out { }
+
+
+
+
+/*SLIDE 5 ANIMATIONS */
+.slide.five{ left: 0%; width: 50%; max-width: 502px; max-height: 610px !important; top: 73%; }
+.slide.five.animate-in{ left: 4%; }
+.slide.five.animate-out{ left: 0%; }
+
+.title.five { left: 55%; width: 35%; bottom: 5%; }
+.title.five.animate-in { bottom: 3%; }
+.title.five.animate-out { opacity: 0; }
+
+.subtitle.five { left: 55%; top: 102%; width: 35%; }
+.subtitle.five.animate-in { top: 99%; }
+.subtitle.five.animate-out { }
+
+
+
+
+
+
+/* ==========================================================================
+   GLOBAL ANIMATION SPEEDS
+   ========================================================================== */
+.animate-in{
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+	opacity: 1;
+}
+.animate-out {
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+	opacity: 0;
+}
+
+
+.prevNext{
+	display: none;
+}
+
+
+
+
+/* ==========================================================================
+   MEDIA QUERIES - 800
+   ========================================================================== */
+@media only screen and (max-width : 800px) {
+	#header {  height: 900px; }
+	.title{ left: 0%!important; bottom: 25%!important; width: 90%!important; text-align: center; padding: 0 5%; }
+	.subtitle{ left: 0%!important; top: 77%!important; width: 90%!important; text-align: center; padding: 0 5%; }
+	.title.animate-in, .title.animate-out, .subtitle.animate-in, .subtitle.animate-out{ left: 0%; width: 100%; }
+	.title.animate-in, .title.animate-out{ bottom: 25%!important; }
+	.subtitle.animate-in, .subtitle.animate-out{ top: 77%!important; }
+	.slide.animate-in, .slide.animate-out{ left: 0px; }
+	#nav{ top: 15%; display: none!important; }
+	.prevNext{ display: block; }
+	.next, .prev {
+		position: absolute; opacity: 1; width: 100px;height: 100px; border-radius: 50px; z-index: 9999; cursor: pointer; top: 45%;
+		background-color: rgba(0, 0, 0, .1);
+		-webkit-transition-duration: 1s; -moz-transition-duration: 1s; -o-transition-duration: 1s; -ms-transition-duration: 1s; transition-duration: 1s;	
+	}
+		
+	.prev { left: -50px; background-position: 40px center!important; }
+	.next { right: -50px; background-position: -120px center!important;  }
+	
+	.next:hover,.prev:hover {
+		background-color: rgba(0, 0, 0, .6);
+		-webkit-transition-duration: 1s; -moz-transition-duration: 1s; -o-transition-duration: 1s; -ms-transition-duration: 1s; transition-duration: 1s;
+	}
+	
+	
+	/* SLIDE ONE */
+	.slide.one{ left: 50%; margin-left: -240px; width: 380px; bottom: -58%; }
+	.slide.one.animate-in { bottom: -58%; }
+	
+	
+	/* SLIDE TWO */
+	.slide.twoTwo, .slide.twoThree{ left: 50%; margin-left: -163px; top: 50%; width:100%; }
+	.slide.twoOne { left: 30%; margin-left: -163px; top: 50%; width:100%; }
+	.slide.twoThree { left: 78%; margin-left: -163px; top: 50%; width:100%; }
+	.slide.twoTwo.animate-in{ left: 50%; margin-left: -163px; top: 72%; }
+	.slide.twoOne.animate-in{ left: 30%; margin-left: -163px; top: 77%; }
+	.slide.twoThree.animate-in{ left: 78%; margin-left: -163px; top: 77%; }
+	
+	
+	/* SLIDE THREE */
+	.slide.three { left: 50%; margin-left: -400px; width: 800px; }
+	.slide.three.animate-in { top: 104%; }
+	.title.three{ bottom: 14%; }
+	.subtitle.three{ top: 83%; }
+	
+	
+	/* SLIDE FOUR */
+	.slide.four { left: 50%; margin-left: -160px; bottom: -100%; width: 100%; max-width: 380px; }
+	.slide.four.animate-in{ left: 48%; bottom: -52%;; }
+	
+	
+	/* SLIDE FIVE */
+	.slide.five { width: 380px; margin-left: -225px; left: 50%; top: 100%; }
+	.slide.five.animate-in{ left: 50%; }
+	.slide.five.animate-out{ left: 50%; }
+	
+ }
+
+
+/* ==========================================================================
+   MEDIA QUERIES - 640
+   ========================================================================== */ 
+@media only screen and (max-width : 640px) {
+	/* SLIDE ONE */
+	.slide.one{ left: 50%; margin-left: -220px; width: 360px; bottom: -100%; }
+	.slide.one.animate-in { bottom: -52%; }
+	
+	
+	/* SLIDE TWO */
+	.slide.twoTwo { left: 50%; margin-left: -150px; top: 50%; width:300px; }
+	.slide.twoOne { left: 28%; margin-left: -125px; top: 50%; width:250px; }
+	.slide.twoThree { left: 75%; margin-left: -125px; top: 50%; width:250px; }
+	.slide.twoTwo.animate-in{ left: 50%; margin-left: -150px; top: 70%; }
+	.slide.twoOne.animate-in{ left: 28%; margin-left: -125px; top: 75%; }
+	.slide.twoThree.animate-in{ left: 75%; margin-left: -125px; top: 75%; }
+	
+	
+	/* SLIDE THREE */
+	.slide.three{ left: 50%; width: 600px; margin-left: -300px; top: 200%; }
+	.slide.three.animate-in { left: 50%; top: 108%; }
+	
+	
+	/* SLIDE FIVE */
+	.slide.five { left: 46%;  top: 102%;  width: 320px; margin-left: -180px;}
+	.slide.five.animate-in{ left: 46%; }
+
+}
+
+
+/* ==========================================================================
+   MEDIA QUERIES - 480
+   ========================================================================== */
+@media only screen and (max-width : 480px) {
+	/* SLIDE ONE */
+	.slide.one{ left: 50%; margin-left: -220px; width: 360px; bottom: -100%; }
+	.slide.one.animate-in { bottom: -52%; }
+	
+	
+	/* SLIDE TWO */
+	.slide.twoTwo { left: 50%; margin-left: -150px; top: 50%; width:300px; }
+	.slide.twoOne, .slide.twoThree { opacity: 0; }
+
+	.slide.twoTwo.animate-in{ left: 50%; margin-left: -150px; top: 70%; }
+
+	
+	
+	/* SLIDE THREE */
+	.slide.three{ left: 50%; width: 600px; margin-left: -300px; top: 200%; }
+	.slide.three.animate-in { left: 50%; top: 108%; }
+	
+	
+	/* SLIDE FIVE */
+	.slide.five { left: 46%; top: 102%;  width: 320px; margin-left: -180px; }
+	.slide.five.animate-in{ left: 46%; }
+		
+ }
+
+
+/* ==========================================================================
+   MEDIA QUERIES - 320
+   ========================================================================== */
+@media only screen and (max-width : 380px) {
+	/* SLIDE ONE */
+	.slide.one{ left: 50%; margin-left: -190px; width: 300px; bottom: -100%; }
+	.slide.one.animate-in { bottom: -50%; }
+	
+	
+	/* SLIDE TWO */
+	.slide.twoTwo { left: 50%; margin-left: -150px; top: 50%; width:300px; }
+	.slide.twoOne, .slide.twoThree { opacity: 0; }
+	.slide.twoTwo.animate-in{ left: 50%; margin-left: -150px; top: 70%; }
+
+	
+	
+	/* SLIDE THREE */
+	.slide.three{ left: 50%; width: 600px; margin-left: -300px; top: 200%; }
+	.slide.three.animate-in { left: 50%; top: 108%; }
+	
+	
+	/* SLIDE FOUR */
+	.slide.four { left: 56%; top: 150%; width: 100%; }
+	.slide.four.animate-in{ left: 56%; top: 104%; }
+	
+	
+	/* SLIDE FIVE */
+	.slide.five { left: 46%; margin-left: -135px; top: 107%; width: 260px!important; }
+	.slide.five.animate-in{ left: 46%; }
+		
+ }
+ 
+ 
