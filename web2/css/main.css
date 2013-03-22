@@ -1,0 +1,308 @@
+/* ==========================================================================
+   HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)
+   ========================================================================== */
+
+html, button, input, select, textarea { color: #222; }
+body { font-size: 1em; line-height: 1.4; }
+
+::-moz-selection { background: #b3d4fc; text-shadow: none; }
+::selection { background: #b3d4fc; text-shadow: none; }
+.chromeframe { margin: 0.2em 0; background: #ccc; color: #000; padding: 0.2em 0;}
+hr { display: block; height: 1px; border: 0; border-top: 1px solid #ccc; margin: 1em 0; padding: 0; }
+img { vertical-align: middle; }
+a{ text-decoration: none; }
+ol, ul{ margin: 0; padding: 0; }
+body { font: 16px/26px Helvetica, Helvetica Neue, Arial;  -webkit-font-smoothing: antialiased; font-smooth: always; text-shadow: 1px 1px 1px rgba(0,0,0,0.004);}
+.wrapper { width: 92%; margin: 0 4%; }
+h1, h2, h3, h4, h5, h6{ font-weight: normal; }
+em{ color: #bec5c8; font-weight: 300; }
+
+
+/* ==========================================================================
+   Main Theme Styles
+   ========================================================================== */
+
+
+.header-container {
+    background: #ffffff; /* Adjust Background colour of header */
+    color: #707b82;  /* Adjust colour of header text */
+	text-shadow: 1px 1px 0 #ffffff;
+	padding-top: 0px;
+	width: 100%;
+}
+.header-container .wrapper { width: 100%; margin: 0%;  }
+.header-container h2{ color: #202d33; font-weight: normal; font-size: 1.6em; line-height: 1.2; font-family: 'ralewayregular'; text-transform: uppercase;}
+.header-container h5{ font-family: 'ralewaysemibold'; color: #bec5c8; font-size: .9em; margin-bottom: 10px; margin-top: 2.2em;	 }
+ h3{ color: #46575e; font-size: 1em; line-height: 1.2; margin-top: 2.6em; font-family: 'ralewaysemibold'; text-transform: uppercase;}
+ 
+ 
+/* ==========================================================================
+   LOGO
+   ========================================================================== */
+.logo{
+	position: relative;
+	width: 200px; /* Adjust Width for Logo if needed */
+	height: 44px; /* Adjust Height for Logo if needed */
+	margin: 0 auto;
+	top: 30px;
+	left: 0%;
+	z-index: 60;
+	display: block;
+}
+.logo img{
+	width: 100%;
+}
+
+
+
+/* ==========================================================================
+   MENU STYLES
+   ========================================================================== */ 
+ul.menu{ position: relative; display: block; text-align: center; top: 70px; z-index: 60; color: #202d33; }
+ul.menu li{ display: inline-block; }
+ul.menu li:after{ content: "/"; padding-left: 20px; padding-right: 20px; }
+ul.menu li.last:after{ content: none; }
+ul.menu li a{ font-family: 'ralewaymedium'; color: #202d33; /* Adjust colour of menu links */
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+ul.menu li a:hover{ color: #0ca2d9; } /* Adjust colour of menu links on hover */
+
+
+
+
+
+/* ==========================================================================
+   HEADER STYLES
+   ========================================================================== */ 
+#header { height: 950px; margin: 0 auto; position: relative; overflow: hidden; width: 100%; }
+#sequence { display: block; height: 100%; margin: 0; position: absolute; max-width: 1140px; width: 100%;
+	/*backface-visibility prevents graphical glitches when frames are animating*/
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	-o-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+#header.internal { height: 165px;  }
+
+#sequence ul{ margin: 0; padding: 0; }
+#sequence ul li{ height: 100%; position: absolute; top: -50%; width: 100%; z-index: 50; }
+#sequence ul li.current-frame{ z-index: 55!important; }
+#sequence ul li .slide, #sequence ul li .title, #sequence ul li .subtitle { position: absolute; }
+#sequence ul li ol li{ display: inline-block; position: static; width: 35px; margin-right: 15px; position: relative; }
+#sequence ul li ol li a{ opacity: .35;
+	-webkit-transition: all 250ms ease-in-out;
+	-moz-transition: all 250ms ease-in-out;
+	-ms-transition: all 250ms ease-in-out;
+	-o-transition: all 250ms ease-in-out;
+	transition: all 250ms ease-in-out;
+}
+#sequence ul li ol li a:hover{ opacity: 1; }
+#sequence ul li ol li img{ width: 35px; }
+
+.slide{ bottom: -50%; opacity: 0; position: relative; height: auto !important; max-height: 900px !important; }
+.title, .subtitle{ opacity: 0; z-index: 50; }
+
+
+
+/*  SLIDER NAV DOTS */
+#nav { display: none; text-align: center; position: relative; top: 95%; margin: 0; padding: 0;z-index: 1000;
+	-webkit-transition-duration: .5s; -moz-transition-duration: .5s; -o-transition-duration: .5s; -ms-transition-duration: .5s; transition-duration: .5s;
+}
+#nav li { display: inline-block; }
+#nav li span{ display: block; cursor: pointer; opacity: 0.5; background-color: #333; height: 12px; width: 12px; text-indent: -10000em; border-radius: 20px;
+	-webkit-transition-duration: 1s; -moz-transition-duration: 1s; -o-transition-duration: 1s; -ms-transition-duration: 1s; transition-duration: 1s;
+}
+#nav li span.active { opacity: 1; background-color: #26a3ea; }
+#nav li span:hover{ opacity: 1; }
+
+
+
+
+
+/* ==========================================================================
+   MAIN CONTAINER
+   ========================================================================== */ 
+.main-container{
+	background: #f5f5f5; /* Adjust Background colour of Main Area */
+	color: #707b82; /* Adjust colour of Main Text */
+	padding-top: 10px;
+}
+.main {  padding: 20px 0 20px;  }
+.main-container h2{ 
+	color: #202d33; 
+	font-family: 'ralewaymedium'; text-transform: uppercase; font-size: 1.2em; margin-top: 2em; 
+}
+.main-container h6{ 
+	color: #3c444a;
+	font-size: 6em; margin: 0.5em 0;
+}
+.main-container section{
+	border-top: 2px solid #d8dddf;
+	padding-top: 1em; margin-top: 40px; clear: left;
+}
+.main-container section img{ width: 100%; border: none; float: left; }
+.main-container.internal img{ width: 100%; border: none; float: none; padding-bottom: 4em; padding-top: 2em; max-width: 350px;
+}
+.main-container.internal section{ float: none; width: 100%;padding-top: 1em; padding-bottom: 4em; }
+.main-container.internal aside{ float: none; width: 100%; border-top: 2px solid #d8dddf; padding-top: 1em; margin-top: 40px; text-align: center; }
+.internal ol li{
+	margin-left: 30px;
+	padding-top: 1em;	
+}
+.flexslider2 {
+	border-top: 2px solid #d8dddf;
+	padding-top: 60px; margin-top: 0px; margin-bottom: 90px; 
+}
+.quote .slides li{
+	color: #212121;
+	font-size: 1.6em; line-height: 1.4; font-weight: 100; padding-bottom: .5em; font-family: 'ralewaylight';  text-align: center;
+}
+
+.quote .flex-control-paging li a {
+	background: #b6b9ba; /* Change colour of nav dots */
+	width: 12px;  height: 12px; display: block; cursor: pointer; text-indent: -9999px; border-radius: 20px; 
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.quote .flex-control-paging li a:hover { 
+	background: #5a6c79; /* Change colour of iphone nav dots on hover */
+}
+.quote .flex-control-paging li a.flex-active { 
+	background: #26a3ea;  /* Change colour of iphone nav dots when active */
+	cursor: default;
+}
+
+
+
+/* ==========================================================================
+   FOOTER CONTAINER
+   ========================================================================== */ 
+.footer-container {
+    background: #eceeef;  /* Adjust Background colour of Footer Area */
+    font-size: 0.9em; padding-bottom: 100px; padding-top: 40px; 
+}
+.footer-container h1{ margin: 0 auto 40px; }
+
+
+/* ==========================================================================
+   FOOTER LOGO
+   ========================================================================== */ 
+.logofoot {
+	position: relative;
+	width: 125px; /* Adjust Width for Logo if needed */
+	height: 29px; /* Adjust Height for Logo if needed */
+	display: block;
+	margin: 0 auto;
+}
+.logofoot img{
+	width: 100%;
+}
+
+
+.footer-container ul{ padding: 0; margin: 0; text-align: center; }
+.footer-container li{ display: inline-block; text-align: center; list-style-type: none; margin-left: 30px; }
+.footer-container li:first-child{ margin-left: 0; }
+.footer-container li a{
+	color: #202d33; /* Change colour of footer links */
+	font-family: 'ralewaymedium';
+	-webkit-transition: all 300ms ease-in-out;
+	-moz-transition: all 300ms ease-in-out;
+	-ms-transition: all 300ms ease-in-out;
+	-o-transition: all 300ms ease-in-out;
+	transition: all 300ms ease-in-out;
+}
+.footer-container li a:hover{
+	color: #26a3ea; /* Change colour of footer links on hover */
+}
+.footer-container footer { padding: 20px 0; }
+
+
+
+
+/* ==========================================================================
+   Insert Author's custom styles
+   ========================================================================== */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media only screen and (min-width: 320px){
+	.main-container section img{ width: 100%; float: none; padding: 30px 0 0; }
+}
+@media only screen and (min-width: 480px) { 
+	.main-container section img{ width: 100%; float: left; max-width: 200px; padding: 40px 20px 40px 0; }	
+}
+@media only screen and (min-width: 680px) {
+	.wrapper { width: 90%; margin: 0 5%; }
+	.header-container .wrapper { width: 100%; margin: 0%;  }
+}
+@media only screen and (min-width: 760px) {
+	.logo{ position: absolute; top: 60px; left: 5%; z-index: 1000; }
+	ul.menu{ position: absolute; right: 5%; top: 70px; z-index: 1000; }
+    .main-container section{ width: 25%; float: left; margin-right: 12%; clear: none; padding-top: 2.2em; }
+    .main-container section.last{ margin-right: 0px; }
+    .main-container section img{ width: 100%; float: none; max-width: 350px; padding: 0; }
+    .main-container.internal aside{ float: right; width: 35%; }
+    .main-container.internal section{ float: left; width: 50%; }
+    .footer-container h1{ float: left; }
+    .footer-container ul{ float: right; }
+    .flexslider2 { margin: 30px 0 90px; padding-top: 80px; }
+	
+}
+@media only screen and (min-width: 870px) { }
+@media only screen and (min-width: 1140px) {
+    .wrapper { width: 1040px; /* 1140px - 10% for margins */ margin: 0 auto; }
+    .header-container .wrapper { width: 1140px; /* 1140px - 10% for margins */ margin: 0 auto; }
+}
+
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }
+
+
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+* { background: transparent !important; color: #000 !important; box-shadow:none !important; text-shadow: none !important;}
+a, a:visited { text-decoration: underline; }
+a[href]:after { content: " (" attr(href) ")";}
+abbr[title]:after { content: " (" attr(title) ")"; }
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after { content: ""; }
+img { max-width: 100% !important; page-break-inside: avoid; }
+
+@page { margin: 0.5cm; }
+p, h2, h3 { orphans: 3; widows: 3; }
+h2, h3 { page-break-after: avoid; }
+}
