@@ -67,7 +67,7 @@
 	  var expire = new Date();
 	  expire.setFullYear(now.getFullYear());
 	  expire.setMonth(now.getMonth());
-	  expire.setDate(now.getDate()+7);
+	  expire.setDate(now.getDate()+2);
 	  expire.setHours(0);
 	  expire.setMinutes(0);
 	  document.cookie = name+"="+value+"; expires=" + expire.toString() +";";
