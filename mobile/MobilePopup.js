@@ -51,7 +51,7 @@
             popupWin.fadeIn("slow");
             shoutzPopupStatus = 1;
         }
-      	_gaq.push(['shoutz._trackEvent', 'shoutzPopup', 'viewed','Popup',1]);
+      	//_gaq.push(['shoutz._trackEvent', 'shoutzPopup', 'viewed','Popup',1]);
     }
 
     function disablePopup(popupWin, backgd) {
@@ -117,18 +117,18 @@
             ev.preventDefault();
             if (/android/i.test(navigator.userAgent||navigator.vendor||window.opera)) {
 				//_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/Android-Markete-Btn']);
-				_gaq.push(['shoutz._trackEvent','shoutzPopup', 'clicked', 'Android-Market-Btn']);
+				//_gaq.push(['shoutz._trackEvent','shoutzPopup', 'clicked', 'Android-Market-Btn']);
             	window.location = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp";
             } else {
                 //_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/iOS-Appstore-Btn']);
-                _gaq.push(['shoutz._trackEvent', 'shoutzPopup','clicked','iOS-Appstore-Btn']);
+                //_gaq.push(['shoutz._trackEvent', 'shoutzPopup','clicked','iOS-Appstore-Btn']);
                 window.location = "https://itunes.apple.com/us/app/shoutz/id464309202?mt=8";
             }
             return false;
         });
     }	
 	
-    /*
+    
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -136,7 +136,7 @@
 
 	ga('create', 'UA-40746076-1', 'shoutz.com');
 	ga('send', 'pageview');
-    */
+    /*
 		var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-40746076-1']);
 	  _gaq.push(['_trackPageview']);
@@ -146,7 +146,7 @@
 		ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
 		var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 	  })();
-		
+		*/
 	function redirectPage(locale) {
   		window.clearTimeout(timeoutID);
     	//window.location = locale;
