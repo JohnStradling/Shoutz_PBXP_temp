@@ -29,10 +29,10 @@
             "border":"0px solid transparent"
         });
         popupWin.find('#shoutzDnldImg').css({
-            "width": Math.round(310 * ratio),
-            "height": Math.round(63 * ratio),
-            "left": Math.round(170 * ratio),
-            "bottom": Math.round(25 * ratio)
+            "width": Math.round(576 * ratio),
+            "height": Math.round(85 * ratio),
+            "left": Math.round(37 * ratio),
+            "bottom": Math.round(31 * ratio)
         });
         popupWin.find('#shoutzMsg').css({
             "position":"absolute",
@@ -99,10 +99,10 @@
     	var cookied = getCookieValue("powerballMobileShoutzPrompt");
     	if(!cookied){
     		// If no cookie set, set the cookie to expire overnight
-    		setCookieExpireAtMidnight("powerballMobileShoutzPrompt","visited");
+    		//setCookieExpireAtMidnight("powerballMobileShoutzPrompt","visited");
     		// Create the popup
         	var fqdn_prefix = "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/";
-			$('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzMsg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/download_prompt_3-19.png" style="border:none;position:absolute;bottom:0px;left:0px"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click_here.png" style="border:none;position:absolute;bottom:36px;left:176px"/></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
+			$('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzMsg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/download_prompt_5-7.png" style="border:none;position:absolute;bottom:0px;left:0px"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click.png" style="border:none;position:absolute;bottom:36px;left:176px"/></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
 			// Display the popup
         	loadPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
 	  	}
@@ -118,11 +118,11 @@
             if (/android/i.test(navigator.userAgent||navigator.vendor||window.opera)) {
 				//_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/Android-Markete-Btn']);
 				//_gaq.push(['shoutz._trackEvent','shoutzPopup', 'clicked', 'Android-Market-Btn']);
-            	window.location = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp";
+            	window.location = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp&feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5zaG91dHouc2hvdXR6YXBwIl0.";
             } else {
                 //_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/iOS-Appstore-Btn']);
                 //_gaq.push(['shoutz._trackEvent', 'shoutzPopup','clicked','iOS-Appstore-Btn']);
-                window.location = "https://itunes.apple.com/us/app/shoutz/id464309202?mt=8";
+                window.location = "https://itunes.apple.com/us/app/shoutz/id464309202?ls=1&mt=8";
             }
             return false;
         });
