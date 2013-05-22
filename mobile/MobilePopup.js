@@ -118,7 +118,7 @@
             if (/android/i.test(navigator.userAgent||navigator.vendor||window.opera)) {
 				//_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/Android-Markete-Btn']);
 				//_gaq.push(['shoutz._trackEvent','shoutzPopup', 'clicked', 'Android-Market-Btn']);
-            	window.location = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp&feature=nav_result#?t=W251bGwsMSwxLDMsImNvbS5zaG91dHouc2hvdXR6YXBwIl0.";
+            	window.location = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp&referrer=utm_source%3Dpowerball.com%26utm_medium%3DPowerBall-PopOver%26utm_term%3Dpowerball%26utm_campaign%3DPowerball%2520Download%2520Prompt";
             } else {
                 //_gaq.push(['shoutz._trackPageview','/powerball/shoutzPopup/iOS-Appstore-Btn']);
                 //_gaq.push(['shoutz._trackEvent', 'shoutzPopup','clicked','iOS-Appstore-Btn']);
