@@ -198,16 +198,20 @@ function smartbanner() {
 	var force = "none";
 	if(force != "none")
 	{
-		type = options["force"];
-	} else if (UA.match(/iPad|iPhone|iPod/i) != null) {
-		if (UA.match(/Safari/i) != null &&
-		   (UA.match(/CriOS/i) != null ||
-		   window.Number(navigator.userAgent.substr(navigator.userAgent.indexOf('OS ') + 3, 3).replace('_', '.')) < 6)) type = 'ios'; // Check webview and native smart banner support (iOS 6+)
-	} else if (UA.match(/Android/i) != null) {
-		type = 'android';
-	} else {
+		type = force;
+	} else if(/android/i.test(navigator.userAgent||navigator.vendor||window.opera))
+	{
 		type = 'android';
 	}
+	else if (/iP(hone|ad|od)/i.test(navigator.userAgent||navigator.vendor||window.opera))
+	{
+		type = 'ios';
+	}
+	else
+	{
+		type = 'windows';
+	}
+	
 	console.log(type);
 	
 	author = "Shoutz, Inc";
