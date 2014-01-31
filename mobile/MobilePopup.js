@@ -214,7 +214,8 @@ function smartbanner() {
 	else if (type == 'ios')
 	{
 		inStore = 'FREE - in the iTunes App Store';
-	else 
+	}
+	else
 	{
 		inStore = 'FREE - in the Windows Marketplace';
 	}
