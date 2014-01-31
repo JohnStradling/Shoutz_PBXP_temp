@@ -239,7 +239,9 @@ function smartbanner() {
 	}
 	
 	console.log(link);
+	console.log('<div id="smartbanner" class="'+type+'"><div class="sb-container"><a href="#" class="sb-close">&times;</a><span class="sb-icon"></span><div class="sb-info"><strong>'+title+'</strong><span>'+author+'</span><span>'+inStore+'</span></div><a href="'+link+'" class="sb-button"><span>VIEW</span></a></div></div>');
 	
 	$('body').append('<div id="smartbanner" class="'+type+'"><div class="sb-container"><a href="#" class="sb-close">&times;</a><span class="sb-icon"></span><div class="sb-info"><strong>'+title+'</strong><span>'+author+'</span><span>'+inStore+'</span></div><a href="'+link+'" class="sb-button"><span>VIEW</span></a></div></div>');
+	
 }
     
