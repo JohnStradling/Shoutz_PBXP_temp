@@ -102,7 +102,7 @@
 		omt = omt.length ? omt : $('<meta name="author" />').appendTo('head');
 		omt.attr('content', 'Shoutz, Inc');
 		
-		$('head').append('<link rel="stylesheet" href="http://shoutz-pbexptest.azurewebsites.net/mobile/jquery.smartbanner.css" type="text/css" media="screen" />');
+		//$('head').append('<link rel="stylesheet" href="http://shoutz-pbexptest.azurewebsites.net/mobile/jquery.smartbanner.css" type="text/css" media="screen" />');
 		//$('head').append('<script src="http://powerballexp.shoutz.com/mobile/jquery.smartbanner.js"></script>');
 		console.log("Smartbanner");
 		smartbanner();
