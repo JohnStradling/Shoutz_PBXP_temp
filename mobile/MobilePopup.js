@@ -92,7 +92,7 @@
 		return "";
 	}
 	
-	var amt = $('meta[name=apple-itunes-app]');
+	/*var amt = $('meta[name=apple-itunes-app]');
 		amt = amt.length ? amt : $('<meta name="apple-itunes-app" />').appendTo('head');
 		amt.attr('content', 'app-id=464309202');
 		var gmt = $('meta[name=google-play-app]');
@@ -101,7 +101,8 @@
 		var omt = $('meta[name=author]');
 		omt = omt.length ? omt : $('<meta name="author" />').appendTo('head');
 		omt.attr('content', 'Shoutz, Inc');
-		
+	*/
+	
 		//$('head').append('<link rel="stylesheet" href="http://shoutz-pbexptest.azurewebsites.net/mobile/jquery.smartbanner.css" type="text/css" media="screen" />');
 		//$('head').append('<script src="http://powerballexp.shoutz.com/mobile/jquery.smartbanner.js"></script>');
 		console.log("Smartbanner");
@@ -242,7 +243,7 @@ function smartbanner() {
 	console.log(link);
 	
 	
-	$('#container').prepend('<div id="smartbanner" style="position:absolute; left:0; top:0px; border-bottom:1px solid #e8e8e8; width:100%; height:78px; background:-webkit-linear-gradient(top, #f4f4f4 0%,#cdcdcd 100%); background-image: -ms-linear-gradient(top, #F4F4F4 0%, #CDCDCD 100%); background-image: -moz-linear-gradient(top, #F4F4F4 0%, #CDCDCD 100%); box-shadow:0 1px 2px rgba(0,0,0,0.5); z-index:9998; -webkit-font-smoothing:antialiased; overflow:hidden; -webkit-text-size-adjust:none; display:none"><div style="margin: 0 auto;"><a href="#" onclick="closebanner()" style="position:absolute; left:5px; top:5px; display:block; border:2px solid #fff; width:14px; height:14px; font-family:Arial; font-size:15px; line-height:15px; text-align:center; color:#fff; background:#070707; text-decoration:none; text-shadow:none; border-radius:14px; box-shadow:0 2px 3px rgba(0,0,0,0.4); -webkit-font-smoothing:subpixel-antialiased;">&times;</a><span style="position:absolute; left:30px; top:10px; display:block; width:57px; height:57px; background:rgba(0,0,0,0.6); background-size:cover; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,0.3);"></span><div style="position:absolute; left:98px; top:18px; width:44%; font-size:11px; line-height:1.2em; font-weight:bold; color:#6a6a6a; text-shadow:0 1px 0 rgba(255,255,255,0.8);"><strong style="display:block; font-size:13px; color:#4d4d4d; line-height: 18px;">'+title+'</strong><span style="display":block;">'+author+'</span><span style="display":block;">'+inStore+'</span></div><a href="'+link+'" style="position:absolute; right:20px; top:24px; border:1px solid #bfbfbf; padding: 0 10px; min-width: 10%; height:24px; font-size:14px; line-height:24px; text-align:center; font-weight:bold; color:#6a6a6a; background:-webkit-linear-gradient(top, #efefef 0%,#dcdcdc 100%); text-transform:uppercase; text-decoration:none; text-shadow:0 1px 0 rgba(255,255,255,0.8); border-radius:3px; box-shadow:0 1px 0 rgba(255,255,255,0.6),0 1px 0 rgba(255,255,255,0.7) inset;"><span>VIEW</span></a></div></div>');
+	$('#container').prepend('<div id="smartbanner" style="position:absolute; left:0; top:0px; border-bottom:1px solid #e8e8e8; width:100%; height:78px; background:-webkit-linear-gradient(top, #f4f4f4 0%,#cdcdcd 100%); background-image: -ms-linear-gradient(top, #F4F4F4 0%, #CDCDCD 100%); background-image: -moz-linear-gradient(top, #F4F4F4 0%, #CDCDCD 100%); box-shadow:0 1px 2px rgba(0,0,0,0.5); z-index:9998; -webkit-font-smoothing:antialiased; overflow:hidden; -webkit-text-size-adjust:none; display:none;float:left;"><div style="margin: 0 auto;"><a href="#" onclick="closebanner()" style="position:absolute; left:5px; top:5px; display:block; border:2px solid #fff; width:14px; height:14px; font-family:Arial; font-size:15px; line-height:15px; text-align:center; color:#fff; background:#070707; text-decoration:none; text-shadow:none; border-radius:14px; box-shadow:0 2px 3px rgba(0,0,0,0.4); -webkit-font-smoothing:subpixel-antialiased;">&times;</a><span style="position:absolute; left:30px; top:10px; display:block; width:57px; height:57px; background:rgba(0,0,0,0.6); background-size:cover; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,0.3);"></span><div style="position:absolute; left:98px; top:18px; width:44%; font-size:11px; line-height:1.2em; font-weight:bold; color:#6a6a6a; text-shadow:0 1px 0 rgba(255,255,255,0.8);"><strong style="display:block; font-size:13px; color:#4d4d4d; line-height: 18px;">'+title+'</strong><span style="display":block;">'+author+'</span><br /><span style="display":block;">'+inStore+'</span></div><a href="'+link+'" style="position:absolute; right:20px; top:24px; border:1px solid #bfbfbf; padding: 0 10px; min-width: 10%; height:24px; font-size:14px; line-height:24px; text-align:center; font-weight:bold; color:#6a6a6a; background:-webkit-linear-gradient(top, #efefef 0%,#dcdcdc 100%); text-transform:uppercase; text-decoration:none; text-shadow:0 1px 0 rgba(255,255,255,0.8); border-radius:3px; box-shadow:0 1px 0 rgba(255,255,255,0.6),0 1px 0 rgba(255,255,255,0.7) inset;"><span>VIEW</span></a></div></div>');
 	
 	$('#smartbanner').slideDown(400,'swing');
 }
