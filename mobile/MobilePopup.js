@@ -175,7 +175,7 @@ function getShoutzAd() {
  * Copyright (c) 2012 Arnold Daniels <arnold@jasny.net>
  * Based on 'jQuery Smart Web App Banner' by Kurt Zenisek @ kzeni.com
  */
-function ($) {
+function smartbanner() {
     var SmartBanner = function (options) {
         this.origHtmlMargin = parseFloat($('html').css('margin-top')) // Get the original margin-top of the HTML element so we can take that into account
         this.options = $.extend({}, $.smartbanner.defaults, options)
