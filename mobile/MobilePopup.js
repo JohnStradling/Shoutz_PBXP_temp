@@ -199,7 +199,7 @@ function smartbanner() {
 	if(force != "none")
 	{
 		type = force;
-	} else if(/android/i.test(navigator.userAgent||navigator.vendor||window.opera))
+	} else if(/android|webOS/i.test(navigator.userAgent||navigator.vendor||window.opera))
 	{
 		type = 'android';
 	}
@@ -209,7 +209,7 @@ function smartbanner() {
 	}
 	else
 	{
-		type = 'windows';
+		type = 'android';
 	}
 	
 	console.log(type);
