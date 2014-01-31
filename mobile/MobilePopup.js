@@ -207,7 +207,17 @@ function smartbanner() {
 	
 	title = "LotteryHub";
 	
-	inStore = 'FREE - ' + (type == 'android' ? 'in the Google Play Store' : type == 'ios' ? 'in the iTunes App Store': 'in the Windows Marketplace') : '';
+	if (type == 'android')
+	{ 
+		inStore = 'FREE - in the Google Play Store';
+	}
+	else if (type == 'ios')
+	{
+		inStore = 'FREE - in the iTunes App Store'
+	else 
+	{
+		inStore = 'FREE - in the Windows Marketplace';
+	}
 	
 	console.log(inStore);
 	
