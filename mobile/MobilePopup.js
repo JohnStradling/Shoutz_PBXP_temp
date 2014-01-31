@@ -192,7 +192,7 @@ function getShoutzAd() {
                window.Number(navigator.userAgent.substr(navigator.userAgent.indexOf('OS ') + 3, 3).replace('_', '.')) < 6)) this.type = 'ios' // Check webview and native smart banner support (iOS 6+)
         } else if (UA.match(/Android/i) != null) {
             this.type = 'android'
-        } else if (UA.match(/Windows NT 6.2/i) != null && UA.match(/Touch/i) !== null) {
+        } else {
             this.type = 'windows'
         }
 
