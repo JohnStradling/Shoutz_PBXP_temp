@@ -213,7 +213,7 @@ function smartbanner() {
 	}
 	else if (type == 'ios')
 	{
-		inStore = 'FREE - in the iTunes App Store'
+		inStore = 'FREE - in the iTunes App Store';
 	else 
 	{
 		inStore = 'FREE - in the Windows Marketplace';
