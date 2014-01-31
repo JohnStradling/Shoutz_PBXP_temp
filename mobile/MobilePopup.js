@@ -176,7 +176,7 @@ function getShoutzAd() {
  * Copyright (c) 2012 Arnold Daniels <arnold@jasny.net>
  * Based on 'jQuery Smart Web App Banner' by Kurt Zenisek @ kzeni.com
  */
-function smartbanner(options) {
+function smartbanner() {
 	var type;
 	var title;
 	var author;
@@ -187,8 +187,9 @@ function smartbanner(options) {
 	var scale = $(window).width() / window.screen.width;
 	if (scale < 1) 
 		scale = 1;
-		
-	if(options["force"] != null)
+	
+	var force = "none";
+	if(force != "none")
 	{
 		type = options["force"];
 	} else if (UA.match(/iPad|iPhone|iPod/i) != null) {
@@ -200,15 +201,15 @@ function smartbanner(options) {
 	} else {
 		type = 'windows';
 	}
+	console.log(type);
 	
 	author = "Shoutz, Inc";
 	
-	var meta = $(type == 'android' ? 'meta[name="google-play-app"]' :
-            type == 'ios' ? 'meta[name="apple-itunes-app"]' : 'meta[name="msApplication-ID"]');
-			
 	title = "LotteryHub";
 	
 	inStore = 'FREE - ' + (type == 'android' ? 'in the Google Play Store' : type == 'ios' ? 'in the iTunes App Store': 'in the Windows Marketplace') : '';
+	
+	console.log(inStore);
 	
 	if (type=="android")
 	{
@@ -223,6 +224,7 @@ function smartbanner(options) {
 		link = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp&referrer=utm_source%3DPowerball%26utm_medium%3DDLPrompt";
 	}
 	
+	console.log(link);
 	
 	$('body').append('<div id="smartbanner" class="'+type+'"><div class="sb-container"><a href="#" class="sb-close">&times;</a><span class="sb-icon"></span><div class="sb-info"><strong>'+title+'</strong><span>'+author+'</span><span>'+inStore+'</span></div><a href="'+link+'" class="sb-button"><span>VIEW</span></a></div></div>');
 }
