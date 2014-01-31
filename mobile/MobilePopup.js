@@ -202,7 +202,7 @@ function smartbanner() {
 	} else if (UA.match(/Android/i) != null) {
 		type = 'android';
 	} else {
-		type = 'windows';
+		type = 'android';
 	}
 	console.log(type);
 	
