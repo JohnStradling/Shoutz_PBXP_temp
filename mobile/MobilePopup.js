@@ -111,13 +111,14 @@
     	var timeoutID;
     	// Check for shoutz cookie
     	
-		//var cookied = getCookieValue("powerballMobileShoutzPrompt");
+		var cookied = getCookieValue("powerballMobileShoutzPromptnull");
     	if(!cookied){
     		// If no cookie set, set the cookie to expire overnight
     		setCookieExpireAtMidnight("powerballMobileShoutzPrompt","visited");
     		// Create the popup
-        	var coin = Math.floor(Math.random() * 2) + 1;
-			if (coin == 1)
+        	var d = new Date();
+			var n = d.getTime(); 
+			if (n%2 == 1)
 			{
 				$(document).ready(smartbanner());
 			}
