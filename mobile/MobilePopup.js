@@ -196,9 +196,15 @@ function smartbanner() {
             this.type = 'windows'
         }
 
+		console.info(this.type);
+
         // Don't show banner if device isn't iOS or Android, website is loaded in app or user dismissed banner
         if (!this.type || standalone || this.getCookie('sb-closed') || this.getCookie('sb-installed')) {
-            return
+				console.info("Returning");
+				console.info(this.type);
+				console.info(standalone);
+				
+	            return
         }
 
         // Calculate scale
