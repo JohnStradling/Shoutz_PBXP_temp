@@ -104,7 +104,7 @@
 		$('head').append('<link rel="stylesheet" href="http://shoutz-pbexptest.azurewebsites.net/mobile/jquery.smartbanner.css" type="text/css" media="screen" />');
 		//$('head').append('<script src="http://powerballexp.shoutz.com/mobile/jquery.smartbanner.js"></script>');
 		
-		$().smartbanner();
+		smartbanner();
 		
     if (jQuery.browser.mobile) {
     	var timeoutID;
@@ -366,4 +366,4 @@ function smartbanner() {
 
     $.smartbanner.Constructor = SmartBanner
 
-}(window.jQuery);
+}
