@@ -103,7 +103,7 @@
 		omt.attr('content', 'Shoutz, Inc');
 		$('head').append('<link rel="stylesheet" href="http://shoutz-pbexptest.azurewebsites.net/mobile/jquery.smartbanner.css" type="text/css" media="screen" />');
 		//$('head').append('<script src="http://powerballexp.shoutz.com/mobile/jquery.smartbanner.js"></script>');
-		
+		console.log("Smartbanner");
 		smartbanner();
 		
     if (jQuery.browser.mobile) {
@@ -196,13 +196,13 @@ function smartbanner() {
             this.type = 'windows'
         }
 
-		console.info(this.type);
+		console.log(this.type);
 
         // Don't show banner if device isn't iOS or Android, website is loaded in app or user dismissed banner
         if (!this.type || standalone || this.getCookie('sb-closed') || this.getCookie('sb-installed')) {
-				console.info("Returning");
-				console.info(this.type);
-				console.info(standalone);
+				console.log("Returning")
+				console.log(this.type)
+				console.log(standalone)
 				
 	            return
         }
