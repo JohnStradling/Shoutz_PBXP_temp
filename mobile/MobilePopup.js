@@ -106,22 +106,28 @@
 		//$('head').append('<link rel="stylesheet" href="http://shoutz-pbexptest.azurewebsites.net/mobile/jquery.smartbanner.css" type="text/css" media="screen" />');
 		//$('head').append('<script src="http://powerballexp.shoutz.com/mobile/jquery.smartbanner.js"></script>');
 		console.log("Smartbanner");
-	
-	$(document).ready(smartbanner());
 		
-    /*if (jQuery.browser.mobile) {
+    if (jQuery.browser.mobile) {
     	var timeoutID;
     	// Check for shoutz cookie
     	
-		var cookied = getCookieValue("powerballMobileShoutzPrompt");
+		//var cookied = getCookieValue("powerballMobileShoutzPrompt");
     	if(!cookied){
     		// If no cookie set, set the cookie to expire overnight
     		setCookieExpireAtMidnight("powerballMobileShoutzPrompt","visited");
     		// Create the popup
-        	var fqdn_prefix = "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/";
-			$('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzMsg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/download_prompt_5-7.png" style="border:none;position:absolute;bottom:0px;left:0px"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click.png" style="border:none;position:absolute;bottom:36px;left:176px"/></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
-			// Display the popup
-        	loadPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
+        	var coin = Math.floor(Math.random() * 2) + 1;
+			if (coin == 1)
+			{
+				$(document).ready(smartbanner());
+			}
+			else
+			{
+				var fqdn_prefix = "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/";
+				$('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzMsg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/download_prompt_5-7.png" style="border:none;position:absolute;bottom:0px;left:0px"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click.png" style="border:none;position:absolute;bottom:36px;left:176px"/></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
+				// Display the popup
+				loadPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
+			}
 	  	}
     
         $('#closeShoutzPopup').click(function (ev) {
