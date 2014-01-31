@@ -184,6 +184,9 @@ function smartbanner() {
 	var link;
 	var button;
 	
+	var standalone = navigator.standalone; // Check if it's already a standalone web app or running within a webui view of an app (not mobile safari)
+    var UA = navigator.userAgent;
+		  
 	var scale = $(window).width() / window.screen.width;
 	if (scale < 1) 
 		scale = 1;
