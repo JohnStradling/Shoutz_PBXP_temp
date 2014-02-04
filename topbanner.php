@@ -41,7 +41,7 @@
 	{
 ?>
 		function getNewAd() {
-			window.location.replace("http://lotteryhub.com/includes/topbanner.php?cnt=<?php echo $cnt; ?>");
+			window.location.replace("http://shoutz-pbexptest.azurewebsites.net/topbanner.php?cnt=<?php echo $cnt; ?>");
 		}
 		$(document).ready(function() {
 			t = setTimeout(function(){getNewAd()},5000);
