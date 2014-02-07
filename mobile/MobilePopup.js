@@ -210,13 +210,9 @@ function smartbanner() {
 	{
 		type = 'android';
 	}
-	else if (/iP(hone|ad|od)/i.test(navigator.userAgent||navigator.vendor||window.opera))
+	else 
 	{
 		type = 'ios';
-	}
-	else
-	{
-		type = 'android';
 	}
 	
 	console.log(type);
