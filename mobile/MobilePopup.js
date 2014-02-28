@@ -120,17 +120,17 @@
     		// Create the popup
         	var d = new Date();
 			var n = d.getTime(); 
-			if (n%2 == 1)
-			{
+			//if (n%2 == 1)
+			//{
 				$(document).ready(smartbanner());
-			}
+			/*}
 			else
 			{
 				var fqdn_prefix = "http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/";
 				$('#container').prepend('<div id="shoutzPopup" style="height:372px;width:672px;display:none;position:fixed;background:transparent;border:none;z-index:2"><img id="shoutzMsg" src="http://d3jdb2tpvzr5pz.cloudfront.net/remoteimg/download_prompt_5-7.png" style="border:none;position:absolute;bottom:0px;left:0px"/><a id="closeShoutzPopup" href="#" style="position:absolute;top:0;right:0;border:none"><div id="shoutzCloseImg" style="border:none"></div></a><a id="shoutzDnld" href="#" style="border:none"><img id="shoutzDnldImg" src="' + fqdn_prefix + 'click.png" style="border:none;position:absolute;bottom:36px;left:176px"/></a></div><div id="shoutzPopupBkgd" style="display:none;position:fixed;height:100%;width:100%;top:0;left:0;background:#000;border:none;z-index:1"></div>');
 				// Display the popup
 				loadPopup($('#shoutzPopup'), $('#shoutzPopupBkgd'));
-			}
+			}*/
 	  	}
     
         $('#closeShoutzPopup').click(function (ev) {
@@ -215,7 +215,7 @@ function smartbanner() {
 	{
 		type = 'ios';
 	}
-	else if(isAndroid);
+	else if(isAndroid)
 	{
 		type = 'android';
 	}
@@ -230,9 +230,9 @@ function smartbanner() {
 	
 	console.log(type);
 	
-	author = "Shoutz, Inc";
+	author = "";
 	
-	title = "LotteryHub";
+	title = "LotteryHUB-Powerball Live!";
 	
 	if (type == 'android')
 	{ 
@@ -251,27 +251,42 @@ function smartbanner() {
 	
 	if (type=="android")
 	{
-		link = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp&referrer=utm_source%3DPowerball.com%26utm_medium%3DSmartBanner";
+		//link = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp&referrer=utm_source%3DPowerball.com%26utm_medium%3DSmartBanner";
+		link = "http://deeplink.me/lotteryhub.com";
 	}
 	else if (type=="ios")
 	{
-		link = "https://itunes.apple.com/us/app/shoutz/id464309202?ls=1&mt=8";
+		//link = "https://itunes.apple.com/us/app/shoutz/id464309202?ls=1&mt=8";
+		link = "http://deeplink.me/lotteryhub.com";
 	}
 	else if (type=="windows")
 	{
-		link = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp&referrer=utm_source%3DPowerball%26utm_medium%3DDLPrompt";
+		//link = "https://play.google.com/store/apps/details?id=com.shoutz.shoutzapp&referrer=utm_source%3DPowerball%26utm_medium%3DDLPrompt";
+		link = "http://deeplink.me/lotteryhub.com";
 	}
 	
-	console.log(link);
+	console.log(inStore);
+	console.log("Is iDevice: " + isiDevice);
+	console.log("Is Android: " + isAndroid);
+	console.log("Is Windows Phone: " + isWindowsPhone);
 	
+	wide=window.innerWidth;
 	
-	$('#container').prepend('<div id="smartbanner" style="position:static; left:0; top:0px; border-bottom:1px solid #e8e8e8; width:100%; height:155px; background:-webkit-linear-gradient(top, #f4f4f4 0%,#cdcdcd 100%); background-image: -ms-linear-gradient(top, #F4F4F4 0%, #CDCDCD 100%); background-image: -moz-linear-gradient(top, #F4F4F4 0%, #CDCDCD 100%); box-shadow:0 1px 2px rgba(0,0,0,0.5); z-index:9998; -webkit-font-smoothing:antialiased; overflow:hidden; -webkit-text-size-adjust:none; display:none;float:left;"><div style="margin: 0 auto;"><a href="#" onclick="closebanner()" style="position:absolute; left:5px; top:5px; display:block; border:2px solid #fff; width:14px; height:14px; font-family:Arial; font-size:15px; line-height:15px; text-align:center; color:#fff; background:#070707; text-decoration:none; text-shadow:none; border-radius:14px; box-shadow:0 2px 3px rgba(0,0,0,0.4); -webkit-font-smoothing:subpixel-antialiased;">&times;</a><span style="position:absolute; left:30px; top:10px; display:block; width:100px; height:100px; background:rgba(0,0,0,0.6); background-size:cover; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,0.3);background-image:url('+icon+')"></span><div style="position:absolute; left:98px; top:18px; width:44%; font-size:11px; line-height:1.2em; font-weight:bold; color:#6a6a6a; text-shadow:0 1px 0 rgba(255,255,255,0.8);"><strong style="display:block; font-size:13px; color:#4d4d4d; line-height: 18px;">'+title+'</strong><span style="display":block;">'+author+'</span><br /><span style="display":block;">'+inStore+'</span></div><a href="'+link+'" style="position:absolute; right:20px; top:24px; border:1px solid #bfbfbf; padding: 0 10px; min-width: 10%; height:24px; font-size:14px; line-height:24px; text-align:center; font-weight:bold; color:#6a6a6a; background:-webkit-linear-gradient(top, #efefef 0%,#dcdcdc 100%); text-transform:uppercase; text-decoration:none; text-shadow:0 1px 0 rgba(255,255,255,0.8); border-radius:3px; box-shadow:0 1px 0 rgba(255,255,255,0.6),0 1px 0 rgba(255,255,255,0.7) inset;"><span>VIEW</span></a></div></div>');
+	$('body').prepend('<div id="smartbanner" style="position:absolute; left:0; top:0px; border-bottom:1px solid #e8e8e8; width:'+wide+'px; height:189px; background:-webkit-linear-gradient(top, #f4f4f4 0%,#cdcdcd 100%); background-image: -ms-linear-gradient(top, #F4F4F4 0%, #CDCDCD 100%); background-image: -moz-linear-gradient(top, #F4F4F4 0%, #CDCDCD 100%); box-shadow:0 1px 2px rgba(0,0,0,0.5); z-index:9998; -webkit-font-smoothing:antialiased; overflow:hidden; -webkit-text-size-adjust:none; display:none;float:left;"><div style="margin: 0 auto;"><a href="#" onclick="closebanner()" style="position:absolute; left:5px; top:5px; display:block; border:2px solid #fff; width:14px; height:14px; font-family:Helvetica; font-size:15px; line-height:15px; text-align:center; color:#fff; background:#070707; text-decoration:none; text-shadow:none; border-radius:14px; box-shadow:0 2px 3px rgba(0,0,0,0.4); -webkit-font-smoothing:subpixel-antialiased;">&times;</a><span style="position:absolute; left:30px; top:10px; display:block; width:170px; height:170px; background:rgba(0,0,0,0.6); background-size:cover; border-radius:10px; box-shadow:0 1px 3px rgba(0,0,0,0.3);background-image:url('+icon+')"></span><div style="position:absolute; left:190px; top:18px; width:44%; font-family:Helvetica; font-size:18px; line-height:1.2em; font-weight:bold; color:#6a6a6a; text-shadow:0 1px 0 rgba(255,255,255,0.8);"><strong style="display:block; font-size:24px; color:#4d4d4d; line-height: 28px;">'+title+'</strong><span style="display":block;font-family:Helvetica;">'+author+'</span><br /><span style="font-family:Helvetica; display":block;">'+inStore+'</span></div><a href="'+link+'" style="position:absolute; right:20px; top:74px; border:1px solid #bfbfbf; padding: 0 10px; min-width: 10%; height:50px; font-size:30px; line-height:24px; text-align:center; font-weight:bold; color:#6a6a6a; background:-webkit-linear-gradient(top, #efefef 0%,#dcdcdc 100%); text-transform:uppercase; text-decoration:none; text-shadow:0 1px 0 rgba(255,255,255,0.8); border-radius:3px; box-shadow:0 1px 0 rgba(255,255,255,0.6),0 1px 0 rgba(255,255,255,0.7) inset;vertical-align:middle;"><span style="color:blue;font-family:Helvetica;vertical-align:middle;">View</span></a></div></div>');
 	
-	$('#smartbanner').slideDown(400,'swing');
+	$('#smartbanner').show();
+	$('.pagetop').css('position', 'relative');
+	$('.pagetop').css('top', '175px');
+	$('#mainContent').css('position', 'relative');
+	$('#mainContent').css('top', '175px');
+	
 }
 
 function closebanner()
 {
-	$('#smartbanner').slideUp(400,'swing');
+	$('#smartbanner').hide();
+	$('.pagetop').css('position', 'static');
+	$('#mainContent').css('position', 'static');
+	
 }
     
